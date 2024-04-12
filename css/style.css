@@ -235,8 +235,13 @@ body {
 }
 
 .container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
-  padding: 0 0 20px;
+  min-height: 100vh;
+  padding: 30px 0;
   width: 800px;
 }
 
@@ -249,44 +254,18 @@ a {
   text-decoration: none;
 }
 
-a,
-button {
-  transition: all 300ms;
-}
-
 a:hover,
 a:focus {
   color: #5c5952;
-  transition: none;
 }
 
 a:active {
   opacity: 0.5;
-  transition: none;
 }
 
 p {
   font-size: 14px;
   margin: 0 0 25px;
-}
-
-ul {
-  list-style: inside circle;
-  margin: 0 0 25px;
-}
-
-ol {
-  list-style: inside lower-alpha;
-  margin: 0 0 25px 0;
-}
-
-ol ol {
-  list-style: inside lower-roman;
-  margin: 0 0 0 25px;
-}
-
-li {
-  font-size: 14px;
 }
 
 [class*="entypo-"]:before {
@@ -303,7 +282,7 @@ header {
   font-family: "leaguegothicregular", helvetica, arial, sans-serif;
   font-weight: 400;
   line-height: 40px;
-  margin: 30px 0;
+  margin-bottom: 30px;
 }
 
 h1 {
@@ -317,7 +296,7 @@ h2 {
   font-weight: 400;
   margin-left: auto;
   text-transform: uppercase;
-  transition: opacity 600ms;
+  transition: opacity 300ms;
   vertical-align: middle;
 }
 
@@ -387,7 +366,7 @@ h2 span:last-child {
 /*==============================================================================*/
 
 .canvas-wrap {
-  margin: 0 0 10px;
+  margin: 0 0 30px;
   position: relative;
 }
 
@@ -413,7 +392,7 @@ h2 span:last-child {
   position: absolute;
   text-align: center;
   text-transform: uppercase;
-  transition: opacity 600ms;
+  transition: opacity 300ms;
   top: 240px;
   width: 100%;
 }
@@ -454,60 +433,55 @@ h2 span:last-child {
 /*==============================================================================*/
 
 .controls {
+  align-items: center;
+  bottom: 0;
   display: flex;
+  height: 150px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 button {
   background: none;
   border: none;
   box-sizing: border-box;
-  color: #5c5952;
+  color: hsl(7, 35%, 95%);
   cursor: pointer;
-  font: 400 20px/50px "leaguegothicregular", helvetica, arial, sans-serif;
-  height: 60px;
+  font: 400 20px/1 "leaguegothicregular", helvetica, arial, sans-serif;
+  height: auto;
   margin: 0;
   outline: none;
+  padding: 20px 30px;
   position: relative;
   text-transform: uppercase;
-  width: 20%;
+  transition: background-color 300ms, color 300ms, opacity 300ms;
 }
 
 button:focus-visible {
-  outline: 4px solid #43413c;
+  outline: 4px solid hsl(7, 35%, 95%);
 }
 
 button.disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0;
+  pointer-events: none;
 }
 
 button span:before {
-  color: #a49a80;
+  color: hsl(7, 35%, 95%);
   margin: 0 3px 0 0;
+  transition: color 300ms;
 }
 
 button:hover,
 button:focus {
   background: #e5ddc8;
-  color: #43413c;
-  transition: none;
+  background-color: hsl(7, 45%, 45%);
 }
 
 button:active {
-  transition: none;
-  opacity: 0.5;
-}
-
-button.disabled:hover,
-button.disabled:focus {
-  background: none;
-  color: #5c5952;
-  transition: none;
-}
-
-button.disabled:active {
-  transition: none;
-  opacity: 0.5;
+  top: 1px;
 }
 
 /*==============================================================================*/
@@ -515,21 +489,11 @@ button.disabled:active {
 /*==============================================================================*/
 
 footer p {
-  line-height: 40px;
+  line-height: 30px;
   margin: 0;
 }
 
 footer a {
   font-weight: bold;
-}
-
-/*==============================================================================*/
-/* Miscellaneous */
-/*==============================================================================*/
-
-hr {
-  border: none;
-  border-bottom: 3px double #e5ddc8;
-  display: block;
-  margin: 0 0 20px;
+  transition: color 300ms;
 }

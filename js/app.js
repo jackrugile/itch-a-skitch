@@ -261,7 +261,7 @@ function renderScreen() {
 
 function renderSegment(x1, y1, x2, y2) {
   ctx.save();
-  if (random(0, 1) > 0.75 / deltaTime) {
+  if (random(0, 1) > 2 / deltaTime) {
     ctx.shadowBlur = 4;
     ctx.shadowColor = colors.shadow;
   }
@@ -352,9 +352,12 @@ function newSkitch() {
         disableNewSkitch();
         toggleLoading();
         hasInteracted = false;
-        domNewSkitch.blur();
       }, 700);
     }
+    oldTime = Date.now();
+    currTime = Date.now();
+    deltaTime = 0;
+    domNewSkitch.blur();
   }
 }
 
