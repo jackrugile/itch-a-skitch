@@ -29,7 +29,7 @@
   </head>
   <body class="page-home">
     <div class="container">
-      <header class="clearfix">
+      <header>
         <h1>Itch A Skitch</h1>
         <h2 class="directions-title hidden">
           <span>Press</span> <i class="icon-left-open"></i
@@ -39,8 +39,8 @@
         </h2>
       </header>
       <div class="canvas-wrap">
-        <canvas id="itchaskitch"></canvas>
-        <div class="controls clearfix">
+        <canvas></canvas>
+        <div class="controls">
           <button class="new-skitch disabled">
             <span class="icon-pencil"></span> New Skitch
           </button>
@@ -58,46 +58,19 @@
       <hr />
       <footer>
         <p>
-          &copy; 2024 Itch A Skitch
-          <span class="divider">//</span>
-          By <a href="https://jackrugile.com" target="_blank">Jack Rugile</a>
+          Made By
+          <a href="https://jackrugile.com" target="_blank">Jack Rugile</a>
           <br />
-          Itch A Skitch is in no way endorsed by or affiliated with Evernote or
-          the team behind the Evernote Skitch product.
-        </p>
-        <h3>About</h3>
-        <p>
-          Itch A Skitch is an HTML5 canvas powered Etch A Sketch. Itch your
-          skitch with your keyboard and download it! I was inspired to make this
-          by some other canvas projects:
-        </p>
-        <ul>
-          <li>
-            <a
-              href="https://developer.cdn.mozilla.net/media/uploads/demos/g/k/gkoberger/5b5d71db4bbf2996755c07c6ef69ebcc/html5-etch-a-sketch_1316389206_demo_package/index.html"
-              >HTML5 Etch-A-Sketch</a
-            >
-            by Gregory Koberger
-          </li>
-          <li>
-            <a href="http://reallygood.co.il/games/sketch/"
-              >Etch a Sketch with HTML5 Canvas</a
-            >
-            by Ronny Orbach
-          </li>
-          <li>
-            <a href="http://sketchtoy.com">Sketch Toy</a> by Hakim El Hattab
-          </li>
-        </ul>
-        <p>
-          And of course, a big thanks to the original Etch A Sketch by Andre
-          Cassagnes and <a href="http://www.ohioart.com/">Ohio Art</a>.
+          <em
+            >Itch A Skitch is in no way endorsed by or affiliated with Evernote
+            or the team behind the Evernote Skitch product.</em
+          >
         </p>
       </footer>
     </div>
     <div class="loader">
       <img src="/img/loader.gif" alt="Loader Animation" />
     </div>
-    <script src="/js/app.js"></script>
+    <script type="module" src="/js/app.js"></script>
   </body>
 </html>
