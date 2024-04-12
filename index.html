@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Itch A Skitch</title>
+    <meta
+      name="description"
+      content="Itch A Skitch is an HTML5 canvas powered Etch A Sketch. Itch your skitch with your keyboard and download it!"
+    />
+    <meta
+      property="og:description"
+      content="Itch A Skitch is an HTML5 canvas powered Etch A Sketch. Itch your skitch with your keyboard and download it!"
+    />
+    <meta property="og:title" content="Itch A Skitch" />
+    <meta property="og:site_name" content="Itch A Skitch" />
+    <meta
+      property="og:image"
+      content="https://itchaskitch.com/img/placeholder.png"
+    />
+    <meta property="og:url" content="https://itchaskitch.com" />
+    <meta property="og:type" content="website" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link
+      href="https://itchaskitch.com/img/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="page-home">
+    <div class="container">
+      <header class="clearfix">
+        <h1>Itch A Skitch</h1>
+        <h2 class="directions-title hidden">
+          <span>Press</span> <i class="icon-left-open"></i
+          ><i class="icon-right-open"></i><i class="icon-up-open"></i
+          ><i class="icon-down-open last"></i> <span>or</span> <i>W</i><i>A</i
+          ><i>S</i><i class="last">D</i> <span>to Start Itching</span>
+        </h2>
+      </header>
+      <div class="canvas-wrap">
+        <canvas id="itchaskitch"></canvas>
+        <div class="controls clearfix">
+          <button class="new-skitch disabled">
+            <span class="icon-pencil"></span> New Skitch
+          </button>
+          <button class="download disabled" title="800 &times; 600 PNG">
+            <span class="icon-download"></span> Download
+          </button>
+        </div>
+        <div class="directions-overlay">
+          <span>Press</span> <i class="icon-left-open"></i
+          ><i class="icon-right-open"></i><i class="icon-up-open"></i
+          ><i class="icon-down-open last"></i> <span>or</span> <i>W</i><i>A</i
+          ><i>S</i><i class="last">D</i> <span>to Start Itching</span>
+        </div>
+      </div>
+      <hr />
+      <footer>
+        <p>
+          &copy; 2024 Itch A Skitch
+          <span class="divider">//</span>
+          By <a href="https://jackrugile.com" target="_blank">Jack Rugile</a>
+          <br />
+          Itch A Skitch is in no way endorsed by or affiliated with Evernote or
+          the team behind the Evernote Skitch product.
+        </p>
+        <h3>About</h3>
+        <p>
+          Itch A Skitch is an HTML5 canvas powered Etch A Sketch. Itch your
+          skitch with your keyboard and download it! I was inspired to make this
+          by some other canvas projects:
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://developer.cdn.mozilla.net/media/uploads/demos/g/k/gkoberger/5b5d71db4bbf2996755c07c6ef69ebcc/html5-etch-a-sketch_1316389206_demo_package/index.html"
+              >HTML5 Etch-A-Sketch</a
+            >
+            by Gregory Koberger
+          </li>
+          <li>
+            <a href="http://reallygood.co.il/games/sketch/"
+              >Etch a Sketch with HTML5 Canvas</a
+            >
+            by Ronny Orbach
+          </li>
+          <li>
+            <a href="http://sketchtoy.com">Sketch Toy</a> by Hakim El Hattab
+          </li>
+        </ul>
+        <p>
+          And of course, a big thanks to the original Etch A Sketch by Andre
+          Cassagnes and <a href="http://www.ohioart.com/">Ohio Art</a>.
+        </p>
+      </footer>
+    </div>
+    <div class="loader">
+      <img src="/img/loader.gif" alt="Loader Animation" />
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

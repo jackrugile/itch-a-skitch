@@ -1,0 +1,9 @@
+{
+  "name": "itch-a-skitch",
+  "scripts": {
+    "dev": "http-server -c-1 -a localhost"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
