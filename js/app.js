@@ -3,6 +3,7 @@ let domDownload = document.querySelector(".download"),
   domLoader = document.querySelector(".loader"),
   domDirectionsTitle = document.querySelector(".directions-title"),
   domDirectionsOverlay = document.querySelector(".directions-overlay"),
+  domCanvasWrap = document.querySelector(".canvas-wrap"),
   domCanvas = document.querySelector("canvas"),
   ctx = domCanvas.getContext("2d"),
   width = (domCanvas.width = 800),
@@ -344,15 +345,17 @@ function newSkitch() {
       window.confirm("Are you sure you want to erase and create a new skitch?")
     ) {
       toggleLoading();
+      domCanvasWrap.classList.add("shake");
       window.clearTimeout(eraseTimeout);
       eraseTimeout = window.setTimeout(function () {
+        domCanvasWrap.classList.remove("shake");
         path.length = 0;
         redrawFlag = true;
         disableDownload();
         disableNewSkitch();
         toggleLoading();
         hasInteracted = false;
-      }, 700);
+      }, 1000);
     }
     oldTime = Date.now();
     currTime = Date.now();
